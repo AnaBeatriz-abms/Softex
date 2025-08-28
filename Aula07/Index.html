@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Saudação</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .background-gif {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1; 
+        }
+    </style>
+</head>
+<body>
+    <img class="background-gif" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_GOHHuqlASV59BAJ4hWBEzO8TQQITOcCredpC8hNc-pWU2xGpt_2sR7s_gPTBJcXPb6WUJohTrM9I-Mump2eaPkS810BusnlCIDIomIdhLzF1BRFKd0zfAIFyd7AvH-qdOVyDeDtOmtQ/s1600/pulo.gif" alt="Fundo animado">
+
+    <div class="box">
+        <h2>Digite seu nome:</h2>
+        <input type="text" id="nome" placeholder="Seu nome aqui">
+        <button id="btn">Enviar</button>
+        <div id="mensagem"></div>
+        <button id="btn-proximo">Próximo</button> 
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
