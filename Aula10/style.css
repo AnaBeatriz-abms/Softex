@@ -1,0 +1,106 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #ede0d4 50%, #f28a9d 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card {
+    background: linear-gradient(135deg, #da627d, #f28a9d);
+    padding: 25px 20px 30px 20px;
+    border-radius: 25px;
+    text-align: center;
+    width: 260px;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.25);
+    position: relative;
+    z-index: 2;
+    top: -50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 450px; /* Definindo uma altura mínima para o card */
+}
+
+.card .perfil {
+    background-color: #da627d;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 4px solid white;
+    object-fit: cover;
+}
+
+.card .main {
+    background-color: #ede0d4;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    min-height: 120px; /* Altura mínima para garantir que o conteúdo de 'main' se ajuste */
+}
+
+.card .main ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card .main ul li {
+    margin-bottom: 10px;
+}
+
+.card .form-container {
+    background-color: #ede0d4;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    min-height: 100px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+    }
+
+    .card {
+        top: 0;
+        width: 80%;
+    }
+
+    .main {
+        top: 0;
+        width: 90%;
+        padding: 30px;
+    }
+}
+
+footer {
+    background-color: #3355ff;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1em;
+    width: 100%;
+    margin-top: auto;
+}
