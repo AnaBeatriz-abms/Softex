@@ -1,25 +1,28 @@
-class Funcionario:
-    def __init__(self, nome, salario):
-        self.nome = nome
-        self.salario = salario
+class Funcionario {
+    constructor(nome, salario) {
+        this.nome = nome;
+        this.salario = salario;
+    }
 
-    def descricao(self):
-        return f"Funcionário {self.nome}, salário: {self.salario}"
-
-
-# Classe derivada
-class Gerente(Funcionario):
-    def __init__(self, nome, salario, departamento):
-        super().__init__(nome, salario)  # reaproveita o construtor da classe pai
-        self.departamento = departamento
-
-    def descricao(self):
-        return f"Gerente {self.nome}, salário: {self.salario}, departamento: {self.departamento}"
+    descricao() {
+        return `Funcionário ${this.nome}, salário: ${this.salario}`;
+    }
+}
 
 
+class Gerente extends Funcionario {
+    constructor(nome, salario, departamento) {
+        super(nome, salario);  
+        this.departamento = departamento;
+    }
 
-f = Funcionario("Ana", 3000)
-g = Gerente("Carlos", 5000, "TI")
+    descricao() {
+        return `Gerente ${this.nome}, salário: ${this.salario}, departamento: ${this.departamento}`;
+    }
+}
 
-print(f.descricao())  # Funcionário Ana, salário: 3000
-print(g.descricao())
+const f = new Funcionario("Carolana", 15000);
+const g = new Gerente("Jorge", 2000, "TI");
+
+console.log(f.descricao()); 
+console.log(g.descricao());  
